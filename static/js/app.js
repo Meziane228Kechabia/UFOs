@@ -41,3 +41,26 @@ data.forEach((dataRow) => {
     );
 });
 }
+// Creating function to filter date
+function handleClick(){
+    d3.selectAll("#filter-btn").on("click", handleClick);
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").proprety("value");
+    let filteredData = tableData;
+
+    // Check to see if a date was enterd and filter the data using that date
+    if (date) {
+        // apply 'filter' to the table date to only keep the rows
+        //where the 'datetime' value matches the filter value
+        filteredData = filteredData.filter(row => row.datetime === date);
+    }
+
+    // Rebuild the table using the filtered data
+    // @ Note: if no date was entered, then filteredData will just
+    // be the original tableData
+    buildTable(filteredData);
+    // Attach an event to listen for the form button
+    d3.selectAll("#filter-btn").on("click", handleClick);
+    // Build the table when the page loads
+    buildTable(tableData);
+};
