@@ -10,16 +10,16 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="stattic/css/style.css">
+        <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class ="bg-dark">
     <div class="wrapper">
-        <nav class="navbar navbar-expend-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expend-lg">
             
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
-        <div class="jumbotron">
-            <h1>The Truth Is Out There</h1>
+        <div class="jumborton">
+            <h1 class="display-4">The Truth Is Out There</h1>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -47,7 +47,7 @@
                     <p>Filter Search</p>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <label for="date">Enter Date</label>
+                            <label for="datetime">Enter datetime</label>
                             <input type="text" placeholder="1/10/2010" id="datetime" />
 
                         </li>
@@ -58,6 +58,7 @@
 
                     </ul>
                 </form>
+
              
               </div>
               <div class="col-md-9"> <!--Prep the Table for Data--> 
@@ -84,14 +85,24 @@
               </div>
             </div>
           </div>
+            
+            
         
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app_module.js"></script>
+        
+            
+
+    
     
     
 
 
     
 </body>
+
 
     
 
